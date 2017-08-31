@@ -63,11 +63,12 @@ bootRepackage.enabled = false
 
 dependencies {
 
+	compile('com.fasterxml.jackson.core:jackson-annotations:2.8.7+')
+	
     // common testing
     testCompile('junit:junit:4.+')
     testCompile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.6'
     testCompile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.6'
-    
 }
 
 // code quality below
