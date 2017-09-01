@@ -1,11 +1,15 @@
 package eu.h2020.symbiote.smeur;
 
 import java.util.Arrays;
+import java.util.Map;
 
 public class StreetSegment {
 	public String id;	// Must be unique.
 	public Point[] segmentData;
 	public String comment; // Something human readable that might help identify a segment when debugging, e.g. a street name.
+	public Map<String, Double> exposure;	// only used when this is a air quality response.
+
+	// TODO: We need to agree on units somehow.
 	
 	
 	@Override
@@ -51,6 +55,14 @@ public class StreetSegment {
 		boolean yPointsAreEqual=Arrays.equals(this.segmentData, otherSSL.segmentData);
 		if (!yPointsAreEqual)
 			return false;
+
+		if ( (this.exposure==null && otherSSL.exposure!=null) || (this.exposure!=null && otherSSL.exposure==null) )
+			return false;
+		
+		// Here exposures are either both null or both not null.
+		if (this.exposure!=null && !this.exposure.equals(otherSSL.exposure))
+			return false;
+
 		
 		return true;
 	}
