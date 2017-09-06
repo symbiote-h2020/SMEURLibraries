@@ -1,6 +1,14 @@
 package eu.h2020.symbiote.smeur.messages;
 
-public class RegisterInterpolationConsumerResponse {
+
+/**
+ * This data is sent back when somebody tries to register a region.
+ * 
+ * @author DuennebeilG
+ *
+ */
+
+public class RegisterRegionResponse {
 	public enum StatusCode {
 		SUCCESS,
 		ERROR
