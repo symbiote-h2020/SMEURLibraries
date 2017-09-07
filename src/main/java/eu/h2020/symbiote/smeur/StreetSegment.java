@@ -4,12 +4,13 @@ import java.util.Arrays;
 import java.util.Map;
 
 import eu.h2020.symbiote.cloud.model.data.observation.Location;
+import eu.h2020.symbiote.cloud.model.data.observation.ObservationValue;
 
 public class StreetSegment {
 	public String id;	// Must be unique.
 	public Location[] segmentData;
 	public String comment; // Something human readable that might help identify a segment when debugging, e.g. a street name.
-	public Map<String, Double> exposure;	// only used when this is an air quality response.
+	public Map<String, ObservationValue> exposure;	// only used when this is an air quality response.
 
 	
 	

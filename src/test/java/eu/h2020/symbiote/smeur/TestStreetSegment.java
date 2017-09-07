@@ -10,6 +10,8 @@ import org.junit.Test;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import eu.h2020.symbiote.cloud.model.data.observation.Location;
+import eu.h2020.symbiote.cloud.model.data.observation.ObservationValue;
+
 
 public class TestStreetSegment {
 
@@ -19,8 +21,9 @@ public class TestStreetSegment {
 		s.id="ID1";
 		s.comment="Comment 1";
 		s.segmentData=new Location[] {new Location(1.0, 2.0, 0.0, null, null), new Location(3.0, 4.0, 0.0, null, null)};
-		s.exposure=new HashMap<String, Double>();
-		s.exposure.put("NOx", 0.14);
+		s.exposure=new HashMap<String, ObservationValue>();
+		ObservationValue obsVal=new ObservationValue("3.14", null, null);
+		s.exposure.put("NOx", obsVal);
 
 		return s;
 	}
@@ -61,12 +64,12 @@ public class TestStreetSegment {
 		assertFalse(sMaster.equals(s2));
 
 		s2=getFullyDefinedStreetSegment();	// Different in exposure
-		s2.exposure.put("NO2", 0.15);	// One more
+		s2.exposure.put("NO2", new ObservationValue("0.15", null, null));	// One more
 		assertFalse(sMaster.equals(s2));
 		s2.exposure.remove("NOx");		// One other
 		assertFalse(sMaster.equals(s2));
 		s2.exposure.remove("NO2");
-		s2.exposure.put("NOx", 0.15);
+		s2.exposure.put("NOx", new ObservationValue("0.15", null, null));
 		assertFalse(sMaster.equals(s2));
 		s2.exposure=null;
 		assertFalse(sMaster.equals(s2));
@@ -83,8 +86,8 @@ public class TestStreetSegment {
 		s1.id="ID1";
 		s1.comment="Comment 1";
 		s1.segmentData=new Location[] {new Location(1.0, 2.0, 0.0, null, null), new Location(3.0, 4.0, 0.0, null, null)};
-		s1.exposure=new HashMap<String, Double>();
-		s1.exposure.put("NOx", 1.0);	// Use a number here for the tests that can be represented to not run in problems with computer arithmetics!
+		s1.exposure=new HashMap<String, ObservationValue>();
+		s1.exposure.put("NOx", new ObservationValue("1.0", null, null));
 		
 		
         ObjectMapper mapper = new ObjectMapper();
