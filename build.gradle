@@ -50,6 +50,10 @@ publishing {
 // dependencies section
 repositories {
     mavenCentral()
+    maven { 
+        url "https://jitpack.io" 
+    }
+    
 }
 
 // Spring related configs
@@ -64,6 +68,8 @@ bootRepackage.enabled = false
 dependencies {
 
 	compile('com.fasterxml.jackson.core:jackson-annotations:2.8.7+')
+	compile('com.github.symbiote-h2020:SymbIoTeLibraries:develop-SNAPSHOT') { changing = true }
+	
 	
     // common testing
     testCompile('junit:junit:4.+')

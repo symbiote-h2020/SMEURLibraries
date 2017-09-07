@@ -3,9 +3,11 @@ package eu.h2020.symbiote.smeur;
 import java.util.Arrays;
 import java.util.Map;
 
+import eu.h2020.symbiote.cloud.model.data.observation.Location;
+
 public class StreetSegment {
 	public String id;	// Must be unique.
-	public Point[] segmentData;
+	public Location[] segmentData;
 	public String comment; // Something human readable that might help identify a segment when debugging, e.g. a street name.
 	public Map<String, Double> exposure;	// only used when this is an air quality response.
 
