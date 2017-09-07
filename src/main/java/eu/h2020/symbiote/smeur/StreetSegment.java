@@ -24,8 +24,8 @@ public class StreetSegment {
 		buffer.append(id);
 		buffer.append(", ");
 		buffer.append(segmentData==null ? "null" : segmentData.length);
-		buffer.append(" entries --> ");
-		buffer.append(this.comment);
+		buffer.append(" entries.");
+		buffer.append(" Comment=").append(this.comment);
 		
 		return buffer.toString();
 	}

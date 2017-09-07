@@ -25,7 +25,7 @@ public class Point {
 	public String toString() {
 		StringBuffer buffer=new StringBuffer();
 		
-		buffer.append("Point(lon").append(this.lon).append(",lat=").append(this.lat).append(")");
+		buffer.append("Point(lon=").append(this.lon).append(",lat=").append(this.lat).append(")");
 		
 		return buffer.toString();
 	}

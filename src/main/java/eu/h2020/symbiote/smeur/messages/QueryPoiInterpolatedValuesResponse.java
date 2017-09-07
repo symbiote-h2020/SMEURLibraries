@@ -9,11 +9,11 @@ public class QueryPoiInterpolatedValuesResponse {
 		ERROR
 	};
 	
-	StatusCode status;
-	String explanation;	// Only set when status is ERROR. Holds human readable explanation
+	public StatusCode status;
+	public String explanation;	// Only set when status is ERROR. Holds human readable explanation
 	
-	Map<String, Map<String, Double>> theData;	// The outer map's key refers to the point IDs from the query.
-												// The inner maps's key refers to the Pollutants
+	public Map<String, Map<String, Double>> theData;	// The outer map's key refers to the point IDs from the query.
+														// The inner maps's key refers to the Pollutants
 	
 	// TODO: How do we deal with units?
 
