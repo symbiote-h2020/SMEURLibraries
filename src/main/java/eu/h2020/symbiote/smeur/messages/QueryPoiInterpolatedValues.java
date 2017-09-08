@@ -12,7 +12,5 @@ public class QueryPoiInterpolatedValues {
 											// You can use human readable IDs to easy debugging,
 											// The interpolator will not interpret the IDs at all.
 	
-	// TODO: We need to define the ObservedProperties which are requested.
-	
 
 }
