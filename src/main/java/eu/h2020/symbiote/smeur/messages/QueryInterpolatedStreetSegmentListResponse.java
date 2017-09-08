@@ -17,4 +17,7 @@ public class QueryInterpolatedStreetSegmentListResponse {
 	public StreetSegmentList theList;	// Only filled on success.
 								// Note that not all fields of the segments are filled even on success.
 	
+	public String dateInterpolated;	// Currently unused. Future usage: Will be filled with a 
+									// timestamp when the interpolation was done (.i.e. how old the values are)
+	
 }

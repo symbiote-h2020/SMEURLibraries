@@ -1,5 +1,8 @@
 package eu.h2020.symbiote.smeur.messages;
 
+import java.util.Set;
+
+import eu.h2020.symbiote.cloud.model.data.observation.Property;
 import eu.h2020.symbiote.smeur.StreetSegmentList;
 
 /**
@@ -14,6 +17,10 @@ public class RegisterRegion {
 								// The ID is used to route back interpolated values to the consumer.
 	
 	public StreetSegmentList streetSegments;
+	public Set<Property> properties;		// Mention observedProperties here that you want to have interpolated
+											// This set is forwarded to the ResourceManager
 	
-	// We also need a list of observedproperties here.
+	public boolean yPushInterpolatedValues;	// If set to true, every time a new set of interpolated 
+											// values is available, they are pushed to the GRC
+	
 }

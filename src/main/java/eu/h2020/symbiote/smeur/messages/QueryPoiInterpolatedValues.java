@@ -11,6 +11,7 @@ public class QueryPoiInterpolatedValues {
 	public Map<String, Location> thePoints;	// The strings are used as IDs for the points and will re-occur in the response.
 											// You can use human readable IDs to easy debugging,
 											// The interpolator will not interpret the IDs at all.
-	
+
+	// Note: This will give you all interpolated properties.
 
 }
