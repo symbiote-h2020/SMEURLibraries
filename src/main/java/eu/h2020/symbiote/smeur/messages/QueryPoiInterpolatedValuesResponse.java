@@ -13,7 +13,7 @@ public class QueryPoiInterpolatedValuesResponse {
 	public StatusCode status;
 	public String explanation;	// Only set when status is ERROR. Holds human readable explanation
 	
-	public Map<String, Map<String, PoIInformation>> theData;	// The outer map's key refers to the point IDs from the query.
+	public Map<String, PoIInformation> theData;	// The outer map's key refers to the point IDs from the query.
 																// This ID should be identical to the id within the PoIInformation
 	
 	// TODO: discuss whether the inner key "string" (key to pollutant) can/should be changed to the type "Property".
