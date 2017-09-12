@@ -10,4 +10,14 @@ public class QueryPoiInterpolatedValues {
 											// You can use human readable IDs to easy debugging,
 											// The interpolator will not interpret the IDs at all.
 
+	
+	@Override
+	public String toString() {
+		StringBuffer buffer=new StringBuffer();
+		
+		buffer.append("A ").append(QueryPoiInterpolatedValues.class.getTypeName()).append("\n");
+		buffer.append("The points queried are").append(thePoints);
+		
+		return buffer.toString();
+	}
 }

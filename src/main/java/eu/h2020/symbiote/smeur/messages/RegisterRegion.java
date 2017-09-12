@@ -23,4 +23,18 @@ public class RegisterRegion {
 	public boolean yPushInterpolatedValues;	// If set to true, every time a new set of interpolated 
 											// values is available, they are pushed to the GRC
 	
+	
+	
+	@Override
+	public String toString() {
+		StringBuffer buffer=new StringBuffer();
+		buffer.append("A RegisterRegion message with:\n");
+		buffer.append("RegionID=").append(regionID).append("\n");
+		buffer.append("streetSegmentList=").append(streetSegments).append("\n");
+		buffer.append("Properties are ").append(properties).append("\n");
+		buffer.append("Pushing for interploated values is ").append(this.yPushInterpolatedValues);
+		
+		return buffer.toString();
+		
+	}
 }
