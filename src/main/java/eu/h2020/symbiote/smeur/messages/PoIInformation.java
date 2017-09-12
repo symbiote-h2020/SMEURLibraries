@@ -13,12 +13,13 @@ import eu.h2020.symbiote.smeur.StreetSegment;
 public class PoIInformation {
 	public String poiID;	// A copy of the PoI-ID as in the request.
 							// The same ID is also used in other places so it's redundant.
-							// The main purpose of this ID is to have all information bundled. 
-
-	public Map<String, ObservationValue>	interpolatedValues;	// Guess, what this might be :-)
+							// The main purpose of this ID is to have all information bundled.
 	
-	// Information below only for debugging and comparable actions:
-	// These fields may change on short notice
-	public String regionID;				// The regionID this information was taken from.
+	public String errorReason;	// Usually null. Human readable error message when something went wrong.
+
+	public Map<String, ObservationValue>	interpolatedValues;	
+	
+	// Information below for error checking, debugging and comparable actions:
+	public String regionID;				// The regionID this information was taken from. 
 	public StreetSegment theSegment;	// The segment found to be nearest.
 }
