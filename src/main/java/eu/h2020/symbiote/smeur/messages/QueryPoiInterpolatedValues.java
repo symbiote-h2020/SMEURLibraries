@@ -20,4 +20,20 @@ public class QueryPoiInterpolatedValues {
 		
 		return buffer.toString();
 	}
+
+
+	public QueryPoiInterpolatedValues(Map<String, Location> thePoints) {
+												super();
+												this.thePoints = thePoints;
+											}
+
+
+	public Map<String, Location> getThePoints() {
+		return thePoints;
+	}
+
+
+	public void setThePoints(Map<String, Location> thePoints) {
+		this.thePoints = thePoints;
+	}
 }
