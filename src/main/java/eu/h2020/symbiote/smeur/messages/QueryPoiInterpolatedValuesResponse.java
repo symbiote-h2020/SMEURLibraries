@@ -1,6 +1,7 @@
 package eu.h2020.symbiote.smeur.messages;
 
 import java.util.Map;
+import java.util.Objects;
 
 
 public class QueryPoiInterpolatedValuesResponse {
@@ -19,4 +20,30 @@ public class QueryPoiInterpolatedValuesResponse {
 	// TODO: discuss whether the inner key "string" (key to pollutant) can/should be changed to the type "Property".
 	// Background: Property has an equals and a hashCode function in the meantime. So it CAN be used as a key.
 
+	
+	public boolean equals(Object o) {
+		if (o==this)
+			return true;
+		
+		if (o==null)
+			return false;
+		
+		if ( !(o instanceof QueryPoiInterpolatedValuesResponse) )
+			return false;
+		
+		QueryPoiInterpolatedValuesResponse other=(QueryPoiInterpolatedValuesResponse)o;
+		
+
+		if (this.status!=other.status)
+			return false;
+		
+		if (!Objects.equals(this.explanation, other.explanation))
+			return false;
+		
+		if (!Objects.equals(this.theData, other.theData))
+			return false;
+		
+		return true;
+	}
+	
 }

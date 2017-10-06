@@ -1,6 +1,7 @@
 package eu.h2020.symbiote.smeur.messages;
 
 import java.util.Map;
+import java.util.Objects;
 
 import eu.h2020.symbiote.cloud.model.data.observation.ObservationValue;
 import eu.h2020.symbiote.smeur.StreetSegment;
@@ -22,4 +23,37 @@ public class PoIInformation {
 	// Information below for error checking, debugging and comparable actions:
 	public String regionID;				// The regionID this information was taken from. 
 	public StreetSegment theSegment;	// The segment found to be nearest.
+	
+	
+	public boolean equals(Object o) {
+		
+		if (this==o)
+			return true;
+		
+		if (o==null)
+			return false;
+		
+		if ( ! (o instanceof PoIInformation) )
+			return false;
+		
+		PoIInformation op=(PoIInformation)o;
+		
+		if (!Objects.equals(this.poiID, op.poiID))
+			return false;
+		
+		if (!Objects.equals(this.errorReason, op.errorReason))
+			return false;
+		
+		if (!Objects.equals(this.interpolatedValues, op.interpolatedValues))
+			return false;
+		
+		if (!Objects.equals(this.regionID, op.regionID))
+			return false;
+		
+		if (!Objects.equals(this.theSegment, op.theSegment))
+			return false;
+		
+		return true;
+	}
+	
 }
