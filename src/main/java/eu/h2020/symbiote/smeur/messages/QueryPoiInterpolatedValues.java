@@ -1,6 +1,7 @@
 package eu.h2020.symbiote.smeur.messages;
 
 import java.util.Map;
+import java.util.Objects;
 
 import eu.h2020.symbiote.cloud.model.data.observation.Location;
 
@@ -28,6 +29,10 @@ public class QueryPoiInterpolatedValues {
 											}
 
 
+	public QueryPoiInterpolatedValues() {
+	}
+
+
 	public Map<String, Location> getThePoints() {
 		return thePoints;
 	}
@@ -35,5 +40,25 @@ public class QueryPoiInterpolatedValues {
 
 	public void setThePoints(Map<String, Location> thePoints) {
 		this.thePoints = thePoints;
+	}
+	
+	
+	public boolean equals(Object o) {
+		
+		if (this==o)
+			return true;
+		
+		if (o==null)
+			return false;
+		
+		if ( ! (o instanceof QueryPoiInterpolatedValues) )
+			return false;
+		
+		QueryPoiInterpolatedValues oq=(QueryPoiInterpolatedValues)o;
+		
+		if (!Objects.equals(this.thePoints, oq.thePoints))
+			return false;
+		
+		return true;
 	}
 }

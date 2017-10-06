@@ -1,4 +1,4 @@
-package eu.h2020.symbiote.smeur;
+package eu.h2020.symbiote.smeur.messages;
 
 import static org.junit.Assert.*;
 
