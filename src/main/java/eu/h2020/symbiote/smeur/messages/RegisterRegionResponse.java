@@ -23,8 +23,8 @@ public class RegisterRegionResponse {
 
 		StringBuffer buffer=new StringBuffer();
 		buffer.append("A RegisterRegionResponse message with:\n");
-		buffer.append("Status is "+status);
-		buffer.append("explanation is: "+explanation);
+		buffer.append("Status is ").append(status).append("\n");
+		buffer.append("explanation is: ").append(explanation);
 		
 		return buffer.toString();
 		

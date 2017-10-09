@@ -19,5 +19,18 @@ public class QueryInterpolatedStreetSegmentListResponse {
 	
 	public String dateInterpolated;	// Currently unused. Future usage: Will be filled with a 
 									// timestamp when the interpolation was done (.i.e. how old the values are)
+
+	
+	public String toString() {
+		StringBuffer buffer=new StringBuffer();
+		
+		buffer.append("A QueryInterpolatedStreetSegmentListResponse with\n");
+		buffer.append("A status of ").append(status).append("\n");
+		buffer.append("An explanation of ").append(explanation).append("\n");
+		
+		buffer.append("The streetSegmentList is ").append(theList).append("\n");
+
+		return buffer.toString();
+	}
 	
 }
