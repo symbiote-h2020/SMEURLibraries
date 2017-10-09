@@ -46,4 +46,15 @@ public class QueryPoiInterpolatedValuesResponse {
 		return true;
 	}
 	
+	public String toString() {
+		StringBuffer buffer=new StringBuffer();
+		
+		buffer.append("A QueryPoiInterpolatedValuesResponse\n");
+		buffer.append("status is:").append(status).append("\n");
+		buffer.append("explanation is ").append(explanation).append("\n");
+		buffer.append("The payload is: ").append(theData);
+		
+		return buffer.toString();
+	}
+	
 }

@@ -32,7 +32,7 @@ public class RegisterRegion {
 		buffer.append("RegionID=").append(regionID).append("\n");
 		buffer.append("streetSegmentList=").append(streetSegments).append("\n");
 		buffer.append("Properties are ").append(properties).append("\n");
-		buffer.append("Pushing for interploated values is ").append(this.yPushInterpolatedValues);
+		buffer.append("Pushing for interpolated values is ").append(this.yPushInterpolatedValues);
 		
 		return buffer.toString();
 		

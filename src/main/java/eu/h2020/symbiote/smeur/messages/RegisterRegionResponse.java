@@ -16,4 +16,18 @@ public class RegisterRegionResponse {
 
 	public StatusCode status;
 	public String explanation;	// In case of an error this might (should!) hold a human readable explanation.
+	
+	
+	@Override
+	public String toString() {
+
+		StringBuffer buffer=new StringBuffer();
+		buffer.append("A RegisterRegionResponse message with:\n");
+		buffer.append("Status is "+status);
+		buffer.append("explanation is: "+explanation);
+		
+		return buffer.toString();
+		
+	}
+
 }
