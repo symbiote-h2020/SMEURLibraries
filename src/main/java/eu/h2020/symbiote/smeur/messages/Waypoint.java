@@ -2,7 +2,7 @@ package eu.h2020.symbiote.smeur.messages;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import eu.h2020.symbiote.cloud.model.data.observation.Location;
+import eu.h2020.symbiote.model.cim.WGS84Location;
 
 /**
 * @author PetarKrivic <petar.krivic@fer.hr>
@@ -10,7 +10,7 @@ import eu.h2020.symbiote.cloud.model.data.observation.Location;
 public class Waypoint{
 
 	@JsonProperty
-	private Location location;
+	private WGS84Location location;
 	
 	@JsonProperty
 	private String navigationDescription;
@@ -19,17 +19,17 @@ public class Waypoint{
 		super();
 	}
 
-	public Waypoint(Location location, String navigationDescription) {
+	public Waypoint(WGS84Location location, String navigationDescription) {
 		super();
 		this.location = location;
 		this.navigationDescription = navigationDescription;
 	}
 	
-	public Location getLocation() {
+	public WGS84Location getLocation() {
 		return location;
 	}
 	
-	public void setLocation(Location location) {
+	public void setLocation(WGS84Location location) {
 		this.location = location;
 	}
 	

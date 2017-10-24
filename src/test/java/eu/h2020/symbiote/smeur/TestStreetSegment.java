@@ -9,8 +9,8 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import eu.h2020.symbiote.cloud.model.data.observation.Location;
-import eu.h2020.symbiote.cloud.model.data.observation.ObservationValue;
+import eu.h2020.symbiote.model.cim.ObservationValue;
+import eu.h2020.symbiote.model.cim.WGS84Location;
 
 
 public class TestStreetSegment {
@@ -20,7 +20,7 @@ public class TestStreetSegment {
 		StreetSegment s=new StreetSegment();	// Master
 		s.id="ID1";
 		s.comment="Comment 1";
-		s.segmentData=new Location[] {new Location(1.0, 2.0, 0.0, null, null), new Location(3.0, 4.0, 0.0, null, null)};
+		s.segmentData=new WGS84Location[] {new WGS84Location(1.0, 2.0, 0.0, null, null), new WGS84Location(3.0, 4.0, 0.0, null, null)};
 		s.exposure=new HashMap<String, ObservationValue>();
 		ObservationValue obsVal=new ObservationValue("3.14", null, null);
 		s.exposure.put("NOx", obsVal);
@@ -56,7 +56,7 @@ public class TestStreetSegment {
 		assertFalse(sMaster.equals(s2));
 
 		s2=getFullyDefinedStreetSegment();	// Different in points
-		s2.segmentData[0].setLatitude(3.0);
+		s2.segmentData[0]=new WGS84Location(1.0, 3.0, 0.0, null, null);
 		assertFalse(sMaster.equals(s2));
 		s2.segmentData[1]=null;
 		assertFalse(sMaster.equals(s2));
@@ -85,7 +85,7 @@ public class TestStreetSegment {
 		StreetSegment s1=new StreetSegment();	// Master
 		s1.id="ID1";
 		s1.comment="Comment 1";
-		s1.segmentData=new Location[] {new Location(1.0, 2.0, 0.0, null, null), new Location(3.0, 4.0, 0.0, null, null)};
+		s1.segmentData=new WGS84Location[] {new WGS84Location(1.0, 2.0, 0.0, null, null), new WGS84Location(3.0, 4.0, 0.0, null, null)};
 		s1.exposure=new HashMap<String, ObservationValue>();
 		s1.exposure.put("NOx", new ObservationValue("1.0", null, null));
 		

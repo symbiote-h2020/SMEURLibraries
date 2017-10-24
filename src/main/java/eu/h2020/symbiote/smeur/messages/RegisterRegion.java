@@ -2,7 +2,7 @@ package eu.h2020.symbiote.smeur.messages;
 
 import java.util.Set;
 
-import eu.h2020.symbiote.cloud.model.data.observation.Property;
+import eu.h2020.symbiote.model.cim.Property;
 import eu.h2020.symbiote.smeur.StreetSegmentList;
 
 /**

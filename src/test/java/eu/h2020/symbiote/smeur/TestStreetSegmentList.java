@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import eu.h2020.symbiote.cloud.model.data.observation.Location;
+import eu.h2020.symbiote.model.cim.WGS84Location;
 
 public class TestStreetSegmentList {
 
@@ -18,7 +18,7 @@ public class TestStreetSegmentList {
 		StreetSegment s1=new StreetSegment();	// Master
 		s1.id="ID1";
 		s1.comment="Comment 1";
-		s1.segmentData=new Location[] {new Location(1.0, 2.0, 0.0, null, null), new Location(3.0, 4.0, 0.0, null, null)};
+		s1.segmentData=new WGS84Location[] {new WGS84Location(1.0, 2.0, 0.0, null, null), new WGS84Location(3.0, 4.0, 0.0, null, null)};
 		ssl1.put("Key1", s1);
 
 		
@@ -27,7 +27,7 @@ public class TestStreetSegmentList {
 		StreetSegment s2=new StreetSegment();	// Different in ID
 		s2.id="ID2";
 		s2.comment="Comment 1";
-		s2.segmentData=new Location[] {new Location(1.0, 2.0, 0.0, null, null), new Location(3.0, 4.0, 0.0, null, null)};
+		s2.segmentData=new WGS84Location[] {new WGS84Location(1.0, 2.0, 0.0, null, null), new WGS84Location(3.0, 4.0, 0.0, null, null)};
 		ssl2.put("Key1", s2);
 		
 
@@ -48,7 +48,7 @@ public class TestStreetSegmentList {
 		StreetSegment s1=new StreetSegment();	// Master
 		s1.id="ID1";
 		s1.comment="Comment 1";
-		s1.segmentData=new Location[] {new Location(1.0, 2.0, 0.0, null, null), new Location(3.0, 4.0,0.0, null, null)};
+		s1.segmentData=new WGS84Location[] {new WGS84Location(1.0, 2.0, 0.0, null, null), new WGS84Location(3.0, 4.0,0.0, null, null)};
 		ssl1.put("Key1", s1);
 
 		

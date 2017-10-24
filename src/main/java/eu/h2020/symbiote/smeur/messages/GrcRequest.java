@@ -2,7 +2,10 @@ package eu.h2020.symbiote.smeur.messages;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import eu.h2020.symbiote.cloud.model.data.observation.Location;
+import eu.h2020.symbiote.model.cim.Location;
+import eu.h2020.symbiote.model.cim.WGS84Location;
+
+
 
 /**
 * @author PetarKrivic <petar.krivic@fer.hr>
@@ -10,10 +13,10 @@ import eu.h2020.symbiote.cloud.model.data.observation.Location;
 public class GrcRequest {
 	
 	@JsonProperty
-	private Location from;
+	private WGS84Location from;
 	
 	@JsonProperty
-	private Location to;
+	private WGS84Location to;
 	
 	@JsonProperty
 	private String transportationMode;
@@ -25,7 +28,7 @@ public class GrcRequest {
 		super();
 	}
 
-	public GrcRequest(Location from, Location to, String transportationMode, String optimisationCriteria) {
+	public GrcRequest(WGS84Location from, WGS84Location to, String transportationMode, String optimisationCriteria) {
 		super();
 		this.from = from;
 		this.to = to;
@@ -37,7 +40,7 @@ public class GrcRequest {
 		return from;
 	}
 
-	public void setFrom(Location from) {
+	public void setFrom(WGS84Location from) {
 		this.from = from;
 	}
 
@@ -45,7 +48,7 @@ public class GrcRequest {
 		return to;
 	}
 
-	public void setTo(Location to) {
+	public void setTo(WGS84Location to) {
 		this.to = to;
 	}
 

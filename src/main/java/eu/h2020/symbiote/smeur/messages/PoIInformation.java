@@ -3,7 +3,7 @@ package eu.h2020.symbiote.smeur.messages;
 import java.util.Map;
 import java.util.Objects;
 
-import eu.h2020.symbiote.cloud.model.data.observation.ObservationValue;
+import eu.h2020.symbiote.model.cim.ObservationValue;
 import eu.h2020.symbiote.smeur.StreetSegment;
 
 /**
