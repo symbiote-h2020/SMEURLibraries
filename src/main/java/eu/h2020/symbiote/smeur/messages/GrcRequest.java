@@ -2,7 +2,6 @@ package eu.h2020.symbiote.smeur.messages;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import eu.h2020.symbiote.model.cim.Location;
 import eu.h2020.symbiote.model.cim.WGS84Location;
 
 
@@ -36,7 +35,7 @@ public class GrcRequest {
 		this.optimisationCriteria = optimisationCriteria;
 	}
 
-	public Location getFrom() {
+	public WGS84Location getFrom() {
 		return from;
 	}
 
@@ -44,7 +43,7 @@ public class GrcRequest {
 		this.from = from;
 	}
 
-	public Location getTo() {
+	public WGS84Location getTo() {
 		return to;
 	}
 
