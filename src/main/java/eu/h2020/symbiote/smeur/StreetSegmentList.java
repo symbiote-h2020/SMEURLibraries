@@ -26,6 +26,7 @@ public class StreetSegmentList extends HashMap<String, StreetSegment> {
 			String key=entry.getKey();
 			StreetSegment value=entry.getValue();
 			buffer.append(key).append("=").append(value.toString());
+			maxElement--;
 		}
 		if (this.size()>3)
 			buffer.append("\n...");
