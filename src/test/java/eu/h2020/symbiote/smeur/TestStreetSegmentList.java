@@ -59,6 +59,34 @@ public class TestStreetSegmentList {
 		assertTrue(ssl1.equals(ssl2));
 
 	}
+	
+	@Test
+	public void testToString() {
+		// This test just exercises toString for different constallations without checking the outcome.
+		// It is sufficient (for this test) that there are no exceptions.
+		// We also assume, that "StreetSegment" is tested
+
+		StreetSegmentList ssl=new StreetSegmentList();
+		ssl.toString();
+
+		ssl.put("1", new StreetSegment());
+		System.out.println(ssl.toString());
+		
+		ssl.put("2", new StreetSegment());
+		System.out.println(ssl.toString());
+		
+		ssl.put("3", new StreetSegment());
+		System.out.println(ssl.toString());
+		
+		ssl.put("4", new StreetSegment());
+		System.out.println(ssl.toString());
+		
+		ssl.put("5", new StreetSegment());
+		System.out.println(ssl.toString());
+		
+
+
+	}
 
 
 }
