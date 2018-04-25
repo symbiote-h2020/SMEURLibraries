@@ -15,6 +15,9 @@ import eu.h2020.symbiote.model.cim.ObservationValue;
 public class DomainSpecificInterfaceResponse {
 
 	@JsonProperty
+	private String id;
+	
+	@JsonProperty
 	private String latitude;
 
 	@JsonProperty
@@ -27,6 +30,14 @@ public class DomainSpecificInterfaceResponse {
 	private List<ObservationValue> observation;
 
 	public DomainSpecificInterfaceResponse() {
+	}	
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getLatitude() {
