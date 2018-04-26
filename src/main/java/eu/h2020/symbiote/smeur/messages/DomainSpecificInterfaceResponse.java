@@ -25,12 +25,23 @@ public class DomainSpecificInterfaceResponse {
 
 	@JsonProperty
 	private String name;
+	
+	@JsonProperty
+	private String amenity;
 
 	@JsonProperty
 	private List<ObservationValue> observation;
 
 	public DomainSpecificInterfaceResponse() {
 	}	
+
+	public String getAmenity() {
+		return amenity;
+	}
+
+	public void setAmenity(String amenity) {
+		this.amenity = amenity;
+	}
 
 	public String getId() {
 		return id;
