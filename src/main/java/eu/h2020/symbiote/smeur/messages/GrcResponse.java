@@ -36,8 +36,22 @@ public class GrcResponse {
 		this.airQualityRating = airQualityRating;
 		this.eco = eco;
 	}
+	
+	public GrcResponse(List<Waypoint> route, double distance, double travelTime, double airQualityRating) {
+		super();
+		this.route = route;
+		this.distance = distance;
+		this.travelTime = travelTime;
+		this.airQualityRating = airQualityRating;
+	}
 
+	public boolean isEco() {
+		return eco;
+	}
 
+	public void setEco(boolean eco) {
+		this.eco = eco;
+	}
 
 	public List<Waypoint> getRoute() {
 		return route;
