@@ -20,17 +20,21 @@ public class GrcResponse {
 	
 	@JsonProperty
 	private double airQualityRating;
+	
+	@JsonProperty
+	private boolean eco;
 
 	public GrcResponse() {
 		super();
 	}
 
-	public GrcResponse(List<Waypoint> route, double distance, double travelTime, double airQualityRating) {
+	public GrcResponse(List<Waypoint> route, double distance, double travelTime, double airQualityRating, boolean eco) {
 		super();
 		this.route = route;
 		this.distance = distance;
 		this.travelTime = travelTime;
 		this.airQualityRating = airQualityRating;
+		this.eco = eco;
 	}
 
 
